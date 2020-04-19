@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dingtai.android.library.video.control.LiveCommentBoderLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_live_chat_comment"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_12" >
+
+        <LinearLayout
+            android:id="@+id/comment_layout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/image_usericon"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/icon_default_user" />
+
+            <TextView
+                android:id="@+id/text_username"
+                android:text="哈哈哈"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:gravity="center_vertical"
+                android:textColor="#4462d4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment_layout_parent"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/dp_12"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/comment_layout_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@color/comment_layout_sub"
+            android:padding="@dimen/dp_4" >
+
+            <ImageView
+                android:id="@+id/image_usericon_sub"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
+                android:src="@drawable/icon_default_user" />
+
+            <TextView
+                android:id="@+id/text_time_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_28"
+                android:layout_alignParentRight="true"
+                android:text="19:03"
+                android:gravity="center_vertical"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_content_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_username_sub"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:textSize="@dimen/textsize_Caption" />
+
+            <TextView
+                android:id="@+id/text_username_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_28"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:layout_alignTop="@+id/image_usericon_sub"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toRightOf="@+id/image_usericon_sub"
+                android:layout_toLeftOf="@+id/text_time_sub"
+                android:text="哈哈哈"
+                android:textSize="@dimen/textsize_Body2" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.dingtai.android.library.video.control.LiveCommentBoderLayout>

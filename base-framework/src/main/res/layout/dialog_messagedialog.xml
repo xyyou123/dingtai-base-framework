@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messagedialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_message_dialog"
+    android:paddingTop="@dimen/dp_16"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/messagedialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_Title2"
+        android:text="提示"/>
+
+    <TextView
+        android:id="@+id/messagedialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:textColor="@color/textcolor_Body2"
+        android:textSize="@dimen/textsize_Subhead2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/messagedialog_NegativeButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            android:background="@drawable/bg_messagedialog_left"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:ellipsize="end"
+            android:textColor="@color/textcolor_Body1"
+            android:textSize="@dimen/textsize_Subhead2"
+            />
+
+        <ImageView
+            android:id="@+id/messagedialog_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/messagedialog_PositiveButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:background="@drawable/bg_messagedialog_right"
+            android:gravity="center"
+            android:textColor="@color/button_normal"
+            android:textSize="@dimen/textsize_Subhead2" />
+    </LinearLayout>
+
+</LinearLayout>

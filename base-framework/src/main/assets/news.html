@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC
+        "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport"
+          content="width=device-width, height=auto, initial-scale=1.0, user-scalable=no">
+    <style>img{max-width:100%!important; width:auto!important; height:auto!important;}</style>
+    <script type="text/javascript">
+        function resize() {
+        window.web_textsize.resize(document.body.getBoundingClientRect().bottom);
+        }
+        function isStart(str1, str2) {
+        var reg = new RegExp("^" + str2);
+        return reg.test(str1);
+        }
+        function request(data) {
+        window.web_request.request(data);
+        return false;
+        }
+        function lookImage() {
+        var objs = document.getElementsByTagName('img');
+        var array = new Array();
+        for (var i = 0; i < objs.length; i++) {
+        var item = objs.item(i);
+        if (item.parentNode != null && item.parentNode.tagName == 'A') {
+        continue;
+        }
+        if(item.width == 0) {
+        continue;
+        }
+        array[array.length] = item.src;
+        item.onclick = function() {
+        window.look.lookImage(this.src, array);
+        }
+        }
+        }
+        function clearAd() {
+        var pList = document.getElementsByTagName('A');
+        for (var value of pList) {
+        if (isStart(value.getAttribute('href'), "http://android.myapp.com/myapp/detail.htm")) {
+        value.style.display = "none";
+        } else if (isStart(value.getAttribute('href'), "dingtai\\$")) {
+        var request = value.getAttribute('href').split("$");
+        if (request.length == 2) {
+        value.setAttribute("href", "javascript:void(0);");
+        value.setAttribute("onclick", "request('" + request[1] + "')");
+        }
+        }
+        }
+        lookImage();
+        resize();
+        }
+    </script>
+</head>
+<body style="margin:12px;float:top" onload="clearAd()">
+<h1 id="android_title" style="margin-top: 12px;color: #333;font-size: 24px;">#{title}</h1>
+<p style="margin-bottom: 24px;color:#444444;font-size:16px;">#{time}</p>
+#{content}
+</body>
+</html>

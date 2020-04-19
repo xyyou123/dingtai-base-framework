@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/layout_post_actionbar"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40">
+
+    <ImageView
+        android:id="@+id/btn_pic"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:foreground="?android:selectableItemBackground"
+        android:src="@drawable/ic_post_pick_image"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/line"/>
+
+    <ImageView
+        android:id="@+id/btn_audio"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:foreground="?android:selectableItemBackground"
+        android:src="@drawable/ic_post_pick_voice"
+        android:layout_height="match_parent" />
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/line"/>
+
+
+    <ImageView
+        android:id="@+id/btn_video"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerInside"
+        android:foreground="?android:selectableItemBackground"
+        android:src="@drawable/ic_post_pick_video"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,2 @@
+include ':app', ':library-com.dingtai.android.library.database', ':lib_aar_local', 'base-framework'
+include 'inject-annotation', 'inject-compile'

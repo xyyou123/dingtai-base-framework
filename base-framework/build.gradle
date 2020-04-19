@@ -1,0 +1,112 @@
+ext {
+    packageName = 'com.lnr.android.base.framework'
+    libraryName = 'base-framework'
+    libraryVersion = '1.0.0'
+}
+
+apply from: '../base-framework.gradle'
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/tbs_sdk_thirdapp_v3.6.0.1325_43613.jar')
+    api files('libs/BaiduLBS_Android.jar')
+    api files('libs/umeng.jar')
+    api files('libs/Msc.jar')
+    api files('libs/Sunflower.jar')
+
+
+    debugApi 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    api 'com.android.support:multidex:1.0.1'
+    api 'com.android.support:appcompat-v7:' + rootProject.ext.support
+    api 'com.android.support:recyclerview-v7:' + rootProject.ext.support
+//    api 'com.android.support:cardview-v7:' + rootProject.ext.support
+    api 'com.android.support:design:' + rootProject.ext.support
+
+    api 'cat.ereza:customactivityoncrash:2.2.0'
+    //json解析
+    api 'com.alibaba:fastjson:1.2.46'
+    //dagger依赖注入
+    api 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+    //路由
+    api 'com.alibaba:arouter-api:1.4.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    //rx
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    //
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    api('com.gyf.immersionbar:immersionbar:2.3.3') {//沉浸式https://github.com/gyf-dev/ImmersionBar
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+    api('com.github.bumptech.glide:glide:4.7.1') {
+        exclude group: 'com.android.support', module: 'support-fragment'
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+
+    api ("com.github.bumptech.glide:recyclerview-integration:4.7.1") {
+        // Excludes the support library because it's already included by Glide.
+        transitive = false
+    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    api 'com.github.chrisbanes:PhotoView:2.1.3'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    api 'com.youth.banner:banner:1.4.10'
+    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    api 'com.github.hackware1993:MagicIndicator:1.5.0'
+    api 'com.zhihu.android:matisse:0.5.2-beta2'
+    api 'com.github.DevlinChiu:FloatWindowPermission:1.1'
+    api  'com.tencent.xinge:xinge:4.0.5-release'
+    
+    //jg包
+    api'com.tencent.jg:jg:1.1'
+    api 'com.tencent.wup:wup:1.0.0.E-release'
+    api 'com.tencent.mid:mid:4.0.7'
+    
+    //埋点
+
+// 埋点
+    api('com.shuwen.analytics:analytics-sdk:1.2.0') {
+        exclude group: 'com.taobao.android'
+    }
+
+    compileOnly ('android:inject-annotation:1.0.0-SNAPSHOT')
+    annotationProcessor ('android:inject-compile:1.0.0-SNAPSHOT')
+
+//    if(upload.toBoolean()) {
+//        api 'sdk:library-com.dingtai.android.library.database:1.0.0-SNAPSHOT'
+//        api 'sdk:library-model:1.0.0-SNAPSHOT'
+//        api 'sdk:library-web:1.0.0-SNAPSHOT'
+//        api 'sdk:library-resource:1.0.0-SNAPSHOT'
+//    }else {
+//        api project(':library-com.dingtai.android.library.database')
+//        api project(':library-model')
+//        api project(':library-web')
+//        api project(':library-resource')
+//    }
+
+
+//    api project(':library-com.dingtai.android.library.database')
+//        api project(':library-model')
+//    api project(':library-web')
+//    api project(':library-resource')
+
+
+//    implementation (name: 'library-com.dingtai.android.library.database-release',ext: 'aar')
+//    implementation (name: 'library-model-release',ext: 'aar')
+//    implementation (name: 'library-resource-release',ext: 'aar')
+//    implementation (name: 'library-web-release',ext: 'aar')
+
+    api 'org.greenrobot:greendao:3.2.2'
+    api 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0'
+
+
+    api 'com.github.dueeeke.dkplayer:dkplayer-java:2.5.2'
+    api 'com.github.dueeeke.dkplayer:dkplayer-armv7a:2.5.2'
+    api 'com.github.bogerchan:Nier-Visualizer:v0.1.2'
+}

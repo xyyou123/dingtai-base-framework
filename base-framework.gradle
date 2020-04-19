@@ -1,0 +1,79 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.kezong.fat-aar'
+apply from: '../upload.gradle'
+apply plugin: 'com.novoda.bintray-release'
+
+tasks.withType(Javadoc) {
+    options.addStringOption("Xdoclint:none", "-quiet")
+    options.addStringOption("encoding","UTF-8")
+}
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        vectorDrawables.useSupportLibrary = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [ AROUTER_MODULE_NAME : project.getName() , moduleName : project.getName()]
+            }
+        }
+
+        manifestPlaceholders = [
+                app_icon : "@drawable/icon_app_jinriyongzhou",
+                launch_theme : "@style/LaunchTheme_yongzhou",
+                XG_ACCESS_ID : "2100293281",
+                XG_ACCESS_KEY : "AXTUIP91227Q",
+                qqAppId : "00000000",
+                HW_APPID : "00000000",
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    
+    
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    sourceSets{
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+}
+
+greendao {
+    daoPackage project.ext.packageName + ".db"
+    targetGenDir 'src/main/java'
+    schemaVersion 1
+}
+
+publish {
+    userOrg = 'zndx0502050105'//bintray.com用户名
+    repoName = "maven"   //bintray上常见的仓库的名字
+    groupId = 'com.emm'//groupId  一般为包名
+    artifactId = 'base-framework'//artifactId 一般为项目名称
+    publishVersion = '1.0.2'//版本号
+    desc = 'this is a base-framework'//描述，不重要
+    website = 'https://github.com/xyyou123'//网站,一般是GitHub的项目地址，一定要是可以访问到的地址
+}
+
+configurations.embed.transitive = true
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="@dimen/dp_8">
+
+      <TextView
+          android:id="@+id/text_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dp_8"
+          android:textColor="@color/textcolor_Body3"
+          android:textSize="@dimen/textsize_Subhead" />
+
+      <TextView
+          android:id="@+id/text_type"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dp_8"
+          android:textColor="@color/textcolor_Body2"
+          android:textSize="@dimen/textsize_Body1" />
+
+      <TextView
+          android:id="@+id/text_time"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dp_8"
+          android:textColor="@color/textcolor_Body2"
+          android:textSize="@dimen/textsize_Body1" />
+
+      <TextView
+          android:id="@+id/text_desc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/dp_8"
+          android:textColor="@color/textcolor_Body2"
+          android:textSize="@dimen/textsize_Body1" />
+
+  </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

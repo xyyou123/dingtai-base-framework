@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_8">
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/textsize_Subhead"
+        android:textColor="@drawable/textcolor_news_item"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="0.4"
+           android:orientation="vertical">
+
+           <com.lnr.android.base.framework.ui.control.view.FixImageView
+               android:id="@+id/item_image1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:fixHeight="0.525"
+               android:scaleType="fitXY"/>
+
+           <com.lnr.android.base.framework.ui.control.view.FixImageView
+               android:id="@+id/item_image2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/dp_8"
+               app:fixHeight="0.525"
+               android:scaleType="fitXY"/>
+       </LinearLayout>
+
+       <com.lnr.android.base.framework.ui.control.view.FixImageView
+           android:id="@+id/item_image3"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="@dimen/dp_8"
+           android:layout_weight="0.6"
+           app:fixHeight="0.7"
+           app:offset="@dimen/dp_8"
+           android:scaleType="fitXY"/>
+
+
+   </LinearLayout>
+
+    <include layout="@layout/item_news_common"/>
+</LinearLayout>

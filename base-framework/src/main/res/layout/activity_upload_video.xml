@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:maxLines="1"
+            android:hint="请填写视频名称"
+            android:background="@null"
+            android:textSize="@dimen/textsize_Subhead2"
+            android:textColor="@color/textcolor_Body2"/>
+
+        <EditText
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:maxLines="10"
+            android:gravity="top"
+            android:hint="请填写视频简介..."
+            android:background="@null"
+            android:textSize="@dimen/textsize_Subhead2"
+            android:textColor="@color/textcolor_Body2"
+            android:minHeight="@dimen/dp_160"/>
+
+       <com.lnr.android.base.framework.ui.control.view.FixImageView
+           android:id="@+id/FixImageView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/icon_add_video"
+           app:fixHeight="0.5"/>
+
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/c_f2f2f2"
+           android:layout_marginTop="@dimen/dp_8"
+           android:layout_marginBottom="@dimen/dp_8">
+
+           <android.support.v7.widget.AppCompatSpinner
+               android:id="@+id/AppCompatSpinner"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+       </FrameLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <CheckBox
+               android:id="@+id/checkbox"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/textsize_Body1"
+               android:textColor="@color/textcolor_Body2"
+               android:text="我已阅读并接受"/>
+
+           <TextView
+               android:id="@+id/btn_protocol"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="《用户上传协议》"
+               android:textSize="@dimen/textsize_Body1"
+               android:textColor="@color/red"/>
+
+       </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:text="上 传"
+            style="@style/button" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

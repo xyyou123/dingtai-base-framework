@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tl_textsize="@dimen/textsize_Caption2"
+            app:tl_textSelectColor="@color/theme"
+            app:tl_textUnselectColor="@color/textcolor_Body1"
+            app:tl_indicator_height="0dp"
+            app:tl_iconWidth="@dimen/dp_24"
+            app:tl_iconHeight="@dimen/dp_24"
+            android:paddingLeft="@dimen/dp_6"
+            android:paddingRight="@dimen/dp_6"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingBottom="@dimen/dp_4"/>
+
+        <com.lnr.android.base.framework.ui.control.view.publish.PublishView
+            android:id="@+id/PublishView"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_share_sina"
+            app:icon_center="@drawable/ic_share_weixin"
+            app:icon_left="@drawable/ic_share_qq"
+            app:icon_right="@drawable/ic_share_qqzone"
+            app:text_left="qq"
+            app:text_center="微信"
+            app:text_right="QQ空间"
+            android:layout_marginTop="-16dp"/>
+
+    </FrameLayout>
+</LinearLayout>

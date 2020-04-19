@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp_4"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <com.lnr.android.base.framework.ui.control.view.FixImageView
+           android:id="@+id/item_image"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:fixHeight="0.45"/>
+
+       <ImageView
+           android:id="@+id/item_state"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:padding="@dimen/dp_4"
+           android:layout_gravity="right"
+           android:src="@drawable/icon_activities_state_begin"/>
+
+   </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:textSize="@dimen/textsize_Body1"
+        android:textColor="@color/textcolor_Body3"/>
+
+    <TextView
+        android:id="@+id/item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_2"
+        android:textSize="@dimen/textsize_Caption"
+        android:textColor="@color/textcolor_Caption"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_8"
+        android:paddingRight="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_gravity="bottom">
+
+
+        <ImageView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_live_time"/>
+
+        <TextView
+            android:id="@+id/item_state_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Caption"
+            android:textColor="@color/textcolor_Caption"/>
+
+        <TextView
+            android:id="@+id/item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textSize="@dimen/textsize_Caption"
+            android:background="@drawable/bg_live_play_count2"
+            android:textColor="@color/textcolor_Caption"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/edit_layout"
+        android:layout_marginTop="@dimen/dp_16">
+
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_4"
+            android:scaleType="centerInside"
+            android:src="@drawable/dt_standard_signin_phone" />
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请填写手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Body2" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/edit_layout">
+
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_4"
+            android:scaleType="centerInside"
+            android:src="@drawable/dt_standard_signin_code" />
+
+        <EditText
+            android:id="@+id/edit_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请填写验证码"
+            android:inputType="number"
+            android:padding="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Body2" />
+
+
+        <TextView
+            android:id="@+id/btn_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_4"
+            android:text="获取验证码"
+            android:textColor="@color/theme"
+            android:textSize="@dimen/textsize_Body2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/edit_layout">
+
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_4"
+            android:scaleType="centerInside"
+            android:src="@drawable/dt_standard_signin_user" />
+
+        <EditText
+            android:id="@+id/edit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请填写真实姓名"
+            android:padding="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Body2" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@style/button"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="认证" />
+
+</LinearLayout>

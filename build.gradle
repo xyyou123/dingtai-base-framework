@@ -1,0 +1,84 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
+    minSdkVersion = 16
+    targetSdkVersion = 25
+    versionCode = 3000
+    versionName = "1.0.0"
+
+    support = '27+'
+}
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'http://localhost:8081/nexus/content/repositories/snapshots/'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+        classpath "com.alibaba:arouter-register:1.0.2"
+        classpath 'com.kezong:fat-aar:1.2.11'
+        classpath 'com.novoda:bintray-release:0.9.2'//添加
+
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+//        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://jitpack.io'
+        }
+
+        maven {
+            url 'http://localhost:8081/nexus/content/repositories/snapshots/'
+        }
+
+        // 添加下面的内容
+        flatDir {
+            dirs '../library-store/libs'
+            dirs 'libs'
+        }
+
+// 埋点仓库
+        maven {
+            url 'http://maven.wts.xinwen.cn/repository/maven-public/'
+            credentials {
+                username 'public-normal-wts'
+                password 'wts!normal?703'
+            }
+        }
+    }
+
+//    tasks.withType(Javadoc) {
+//        options.addStringOption("Xdoclint:none", "-quiet")
+//        options.addStringOption("encoding","UTF-8")
+//    }
+
+
+    tasks.withType(Javadoc).all {
+        enabled = false
+    }
+
+//    tasks.getByPath(":base-framework:javadocRelease").enabled = false
+
+
+//    apt {
+//        arguments {
+//            androidManifestFile variant.outputs[].proce** * esources.manifestFile
+//        }
+//    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

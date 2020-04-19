@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyco.tablayout.SegmentTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:tl_bar_color="@color/white"
+    app:tl_bar_stroke_width="@dimen/dp_1"
+    app:tl_bar_stroke_color="@color/theme"
+    app:tl_textsize="@dimen/textsize_Subhead"
+    app:tl_textUnselectColor="@color/textcolor_Body3"
+    app:tl_textSelectColor="@color/white">
+
+</com.flyco.tablayout.SegmentTabLayout>

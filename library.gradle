@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply from: '../upload.gradle'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [ AROUTER_MODULE_NAME : project.getName(), moduleName : project.getName() ]
+            }
+        }
+
+        manifestPlaceholders = [
+                app_icon : "@drawable/icon_app_jinriyongzhou",
+                launch_theme : "@style/LaunchTheme_yongzhou",
+                XG_ACCESS_ID : "2100293281",
+                XG_ACCESS_KEY : "AXTUIP91227Q",
+                qqAppId : "1106438851"
+        ]
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    sourceSets{
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+}
+
+greendao {
+    daoPackage project.ext.packageName + ".db"
+    targetGenDir 'src/main/java'
+    schemaVersion 1
+}
+
+
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    compileOnly ('android:inject-annotation:1.0.0-SNAPSHOT')
+    annotationProcessor ('android:inject-compile:1.0.0-SNAPSHOT')
+
+    if(upload.toBoolean()) {
+        implementation  ('android:base-framework:1.0.0-SNAPSHOT')
+    }else {
+        implementation project(':base-framework')
+    }
+}
+
+
+

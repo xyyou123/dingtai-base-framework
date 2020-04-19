@@ -1,0 +1,5 @@
+if(useLibrary.toBoolean()) {
+    apply from: '../library.gradle'
+}else {
+    apply from: '../application.gradle'
+}

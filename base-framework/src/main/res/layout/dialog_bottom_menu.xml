@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_share"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_bottom_menu_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:padding="@dimen/dp_12"
+            android:visibility="gone"
+            android:textColor="@color/textcolor_Body1"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/dialog_bottom_menu_title_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:visibility="gone"
+            android:background="@color/line"/>
+
+        <ListView
+            android:id="@+id/dialog_bottom_menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/border"
+            android:overScrollMode="never"
+            android:dividerHeight="1px"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_4"
+            android:background="@color/line"/>
+
+        <TextView
+            android:id="@+id/dialog_bottom_menu_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:foreground="?selectableItemBackground"
+            android:textSize="@dimen/sp_16"
+            android:padding="@dimen/dp_12"
+            android:text="取消"
+            android:textColor="@color/red"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name1">common</string>
+    <string name="badu_key">6sh92gADH6hhwWS41kFA1SSGky7ItDx6</string>
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">发生了一个意想不到的错误。很抱歉给您带来不便。</string>
+    <string name="customactivityoncrash_error_activity_restart_app">重新启动</string>
+    <string name="customactivityoncrash_error_activity_close_app">退出应用</string>
+
+    <string name="toolbar_behavior">com.lnr.android.base.framework.ui.control.view.ToolbarBehavior</string>
+    <string name="dkplayer_replay">重新播放</string>
+    <string name="dkplayer_lock_tip">请先解锁屏幕！</string>
+    <string name="dkplayer_unlocked">已解锁</string>
+    <string name="dkplayer_locked">已锁定</string>
+</resources>

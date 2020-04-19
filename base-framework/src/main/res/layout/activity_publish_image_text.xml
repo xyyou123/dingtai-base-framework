@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_8"
+                android:maxLines="10"
+                android:gravity="top"
+                android:hint="请填写图文直播内容..."
+                android:background="@drawable/bg_publish_edit_layout"
+                android:textSize="@dimen/textsize_Subhead2"
+                android:textColor="@color/textcolor_Body2"
+                android:minHeight="@dimen/dp_160"/>
+
+            <EditText
+                android:id="@+id/text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_8"
+                android:maxLines="1"
+                android:hint="请填写联系电话"
+                android:maxLength="11"
+                android:inputType="number"
+                android:background="@drawable/bg_publish_edit_layout"
+                android:textSize="@dimen/textsize_Subhead2"
+                android:textColor="@color/textcolor_Body2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingRight="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingBottom="@dimen/dp_4"
+                android:text="注：单次上传最大容量6张图片+3个视频(单个视频以200M以内效果最佳，不可超过1G)"
+                android:background="@color/line"
+                android:textSize="@dimen/textsize_Caption"
+                android:textColor="@color/textcolor_Body1"/>
+
+            <com.lnr.android.base.framework.ui.control.view.adapterview.FixGridView
+                android:id="@+id/FixGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:horizontalSpacing="@dimen/dp_4"
+                android:verticalSpacing="@dimen/dp_4"
+                android:numColumns="3"/>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_pic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:scaleType="centerInside"
+            android:padding="@dimen/dp_8"
+            android:foreground="?android:selectableItemBackground"
+            android:src="@drawable/ic_post_pick_image"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line"/>
+
+        <ImageView
+            android:id="@+id/btn_audio"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:padding="@dimen/dp_8"
+            android:scaleType="centerInside"
+            android:foreground="?android:selectableItemBackground"
+            android:src="@drawable/ic_post_pick_voice"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line"/>
+
+
+        <ImageView
+            android:id="@+id/btn_video"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:padding="@dimen/dp_8"
+            android:scaleType="centerInside"
+            android:foreground="?android:selectableItemBackground"
+            android:src="@drawable/ic_post_pick_video"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

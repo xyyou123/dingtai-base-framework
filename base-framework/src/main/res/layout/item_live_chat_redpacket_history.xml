@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/dp_4"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_4"
+        android:background="#D3D3D3"
+        android:textColor="@color/textcolor_Body1"
+        android:drawableLeft="@drawable/icon_redpacket_history"
+        android:drawablePadding="@dimen/dp_4"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/textsize_Caption" />
+
+</LinearLayout>

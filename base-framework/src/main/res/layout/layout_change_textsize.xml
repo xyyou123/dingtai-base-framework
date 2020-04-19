@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_12">
+
+    <com.lnr.android.base.framework.ui.control.web.more.WebTextRatingBar
+        android:id="@+id/WebTextRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_dialog"
+        android:paddingTop="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_24"
+        android:paddingLeft="@dimen/dp_32"
+        android:paddingRight="@dimen/dp_32">
+    </com.lnr.android.base.framework.ui.control.web.more.WebTextRatingBar>
+
+</FrameLayout>

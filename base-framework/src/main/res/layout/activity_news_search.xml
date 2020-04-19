@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8">
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="@dimen/dp_4"
+            android:hint="搜索关键字"
+            android:textSize="@dimen/textsize_Body1"
+            android:textColor="@color/textcolor_Body3"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:padding="@dimen/dp_8"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button_small"
+            android:text="搜索"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/theme"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_Caption"
+            android:textColor="@color/textcolor_Body1"
+            android:layout_centerVertical="true"
+            android:text="最近搜索"/>
+
+
+        <ImageView
+            android:id="@+id/image_delete"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:padding="@dimen/dp_2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_delete"/>
+
+    </RelativeLayout>
+
+    <com.lnr.android.base.framework.ui.control.view.FlowLayout
+        android:id="@+id/FlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_history_empty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/textsize_Caption"
+        android:textColor="@color/textcolor_Body1"
+        android:text="暂无搜索历史"/>
+
+</LinearLayout>

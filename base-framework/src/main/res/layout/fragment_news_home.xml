@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/home_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/home_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/TabLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_40"
+                android:layout_weight="1"
+                app:tl_textsize="@dimen/textsize_Subhead2"
+                app:tl_textBold="SELECT"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_textSelectColor="@color/theme"
+                app:tl_textUnselectColor="@color/textcolor_Body3"
+                app:tl_indicator_color="@color/theme"
+                app:tl_indicator_height="@dimen/dp_1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.lnr.android.base.framework.ui.control.view.NoScrollViewPager
+        android:id="@+id/home_pager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

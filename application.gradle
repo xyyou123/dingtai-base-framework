@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+apply from: '../upload.gradle'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        applicationId project.ext.comppnentPackage
+        versionCode project.ext.comppnentVersionCode
+        versionName project.ext.comppnentVersionName
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        manifestPlaceholders = [
+                HW_APPID : "00000000",
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [ AROUTER_MODULE_NAME : project.getName(), moduleName : project.getName() ]
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    packagingOptions{
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+    signingConfigs {
+        release {
+            keyAlias 'android.keystoreasp'
+            keyPassword '123456'
+            storeFile file('../android.keystore')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    applicationVariants.all {
+        variant -> variant.outputs.all { //这里修改apk文件名
+            outputFileName = "${project.ext.libraryName}-v${variant.versionName}.apk"
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    sourceSets{
+        main {
+            manifest.srcFile 'src/main/app/AndroidManifest.xml'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+
+greendao {
+    daoPackage project.ext.packageName + ".db"
+    targetGenDir 'src/main/java'
+    schemaVersion 1
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+        implementation (name: 'base-framework-release',ext: 'aar')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    compileOnly ('android:inject-annotation:1.0.0-SNAPSHOT')
+
+    annotationProcessor ('android:inject-compile:1.0.0-SNAPSHOT')
+
+//    implementation project(':base-framework')
+
+//    api ('sdk:base-framework:1.0.0-SNAPSHOT')
+
+//    implementation project(':library-news')
+//    implementation project(':library-video')
+//    implementation project(':library-account')
+//    implementation project(':library-modules')
+//    implementation project(':library-update')
+//    implementation project(':library-setting')
+//    implementation project(':library-baoliao')
+//    implementation project(':library-weather')
+//    implementation project(':library-video-recorder')
+//    implementation project(':library-scan')
+//    implementation project(':library-pay')
+//    implementation project(':library-store')
+}
+

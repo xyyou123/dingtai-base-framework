@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/bg_item_live_game_1"
+        android:orientation="vertical" >
+
+        <com.lnr.android.base.framework.ui.control.view.FixImageView
+            android:id="@+id/item_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fixHeight="0.5"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:text="模拟城市3000"
+            android:textColor="@color/textcolor_Body2"
+            android:textSize="@dimen/textsize_Subhead" />
+
+        <TextView
+            android:id="@+id/item_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="@color/textcolor_Body1"
+            android:textSize="@dimen/textsize_Caption" />
+    </LinearLayout>
+
+</LinearLayout>

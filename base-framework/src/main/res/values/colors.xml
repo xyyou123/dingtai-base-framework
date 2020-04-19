@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/theme</color>
+    <color name="colorPrimaryDark">@color/theme</color>
+    <color name="colorAccent">@color/theme</color>
+
+
+    <color name="theme">#3ba36e</color>
+    <color name="theme_shallow">#8ba36e</color>
+
+    <color name="statusbar">#f2f2f2</color>
+    <color name="toolbar">#f2f2f2</color>
+    <color name="toolbar_title">@color/theme</color>
+
+
+    <color name="button_normal">#1897ef</color>
+    <color name="button_unclickable">#881897ef</color>
+    <color name="button_pressed">#aa1897ef</color>
+    <color name="button_unenable">#601897ef</color>
+
+    <color name="border">#e8e8e8</color>
+    <color name="line">#e8e8e8</color>
+
+    <!-- 主标题 87% -->
+    <!-- 子标题 87% -->
+    <!-- 内容 87% -->
+    <!-- 标注 注释说明 54% -->
+    <!-- 菜单 87% -->
+    <!-- 按钮 87% -->
+
+    <color name="tran">#00000000</color>
+
+    <color name="c_f4f4f4">#f4f4f4</color>
+    <color name="c_f2f2f2">#f2f2f2</color>
+    <color name="c_eaeaea">#eaeaea</color>
+    <color name="c_eaeaea_54">#88eaeaea</color>
+    <color name="c_eaeaea_cc">#fadddddd</color>
+    <color name="c_dcdcdc">#dcdcdc</color>
+    <color name="c_dddddd">#dddddd</color>
+    <color name="c_cccccc">#cccccc</color>
+    <color name="c_b2b2b2">#B2B2B2</color>
+
+
+    <color name="background">#eeeeee</color>
+    <color name="backgroundShallow">#f4f4f4</color>
+    <color name="backgroundDark">@color/c_eaeaea</color>
+    <color name="backgroundDark_1">#88eaeaea</color>
+    <color name="backgroundDark_2">#fadddddd</color>
+    <color name="backgroundDark_3">#dddddd</color>
+    <color name="backgroundDark_4">#aaaaaa</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="white_80">#80ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_17">#171717</color>
+
+    <color name="red">#e5645f</color>
+    <color name="red_A0">#A0e5645f</color>
+    <color name="red_60">#60e5645f</color>
+    <color name="green">#00ff00</color>
+    <color name="green2">#00cc00</color>
+
+    <color name="black_87">#DD000000</color>
+
+    <color name="textcolor_Body3">#101010</color>
+    <color name="textcolor_Body2">#303030</color>
+    <color name="textcolor_Body1">#606060</color>
+    <color name="textcolor_Caption">#757575</color>
+    <color name="textcolor_Caption2">#a0a0a0</color>
+
+
+    <color name="select_color">#2e2e32</color>
+    <color name="dkplayer_theme_color">#39C5BB</color>
+    <color name="dkplayer_theme_color_translucent">#9939C5BB</color>
+    <color name="dkplayer_background_color">#60000000</color>
+
+
+
+    <color name="comment_layout_sub">#f8f8f8</color>
+</resources>

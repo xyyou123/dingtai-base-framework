@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="@dimen/dp_8"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="@dimen/dp_80"
+        android:layout_height="@dimen/dp_56"
+        android:scaleType="centerCrop"/>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="@dimen/dp_56">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Subhead"
+            android:textColor="@color/textcolor_Body2"/>
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_4"
+            android:textSize="@dimen/textsize_Caption"
+            android:layout_alignParentBottom="true"
+            android:textColor="#1ca2c5"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_8"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_vod_list_play"/>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="@dimen/dp_4"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/action_bar_edittext"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:minHeight="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_4"
+        android:padding="@dimen/dp_8"
+        android:gravity="left|top"
+        android:hint="说点什么..."
+        android:textColor="@color/textcolor_Body1"
+        android:textSize="@dimen/textsize_Body2"
+        android:background="@drawable/bg_comment_edit" />
+
+    <TextView
+        android:id="@+id/action_bar_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="评论"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        android:textColor="@drawable/textcolor_theme"
+        android:textSize="@dimen/textsize_Body1"/>
+
+</LinearLayout>
